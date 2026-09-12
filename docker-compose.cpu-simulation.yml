@@ -1,0 +1,27 @@
+services:
+  cpu-simulator:
+    build:
+      context: ./cpu-simulator
+    container_name: zabbix-cpu-simulator
+    hostname: zabbix-cpu-simulator
+    environment:
+      ZBX_SERVER_HOST: zabbix-server
+      ZBX_SERVER_PORT: "10051"
+      ZBX_ACTIVE_ALLOW: "false"
+      CPU_WORKERS: "2"
+      CPU_LOAD: "90"
+      CPU_TIMEOUT: "0"
+    command:
+      - /bin/sh
+      - -c
+      - >-
+        stress-ng --cpu "$${CPU_WORKERS}" --cpu-load "$${CPU_LOAD}" --timeout "$${CPU_TIMEOUT}" &
+        exec /usr/sbin/zabbix_agent2 -c /etc/zabbix/zabbix_agent2.conf -f
+    networks:
+      - zabbix
+    restart: unless-stopped
+
+networks:
+  zabbix:
+    external: true
+    name: despliegame-un-contenedor-de-zabbix-docker_default

@@ -1,0 +1,1 @@
+{"problem.get":{"result":[{"eventid":"9001","name":"High CPU utilization","severity":"4"}]},"item.get":{"result":[{"key_":"system.cpu.util","lastvalue":"96.2"}]},"history.get":{"result":[{"clock":"1789214400","value":"96.2"}]},"host.get":{"result":[{"hostid":"10105","host":"zabbix-cpu-simulator"}]}}

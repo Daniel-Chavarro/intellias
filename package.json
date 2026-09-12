@@ -1,0 +1,19 @@
+{
+  "name": "intellias-sre-agent",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "lint": "pnpm --filter @sre/contracts lint",
+    "typecheck": "pnpm --filter @sre/contracts typecheck",
+    "test": "pnpm --filter @sre/contracts test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@types/node": "22.15.3",
+    "typescript": "5.8.3"
+  }
+}

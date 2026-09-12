@@ -1,0 +1,1 @@
+{"alertId":"dd-7001","alertTransition":"Triggered","eventTitle":"CPU monitor alert","eventMessage":"CPU sustained above 90 percent","tags":["host:zabbix-cpu-simulator","service:zabbix"],"alertQuery":"avg(last_5m):avg:system.cpu.user{host:zabbix-cpu-simulator} > 90","templateVariables":["$ALERT_ID","$ALERT_TRANSITION","$EVENT_TITLE","$EVENT_MSG","$TAGS","$ALERT_QUERY"]}

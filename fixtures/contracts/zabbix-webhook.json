@@ -1,0 +1,1 @@
+{"eventId":"9001","eventTime":"2026-09-12T12:00:00.000Z","host":"zabbix-cpu-simulator","itemKey":"system.cpu.util","itemValue":"96.2","severity":4,"triggerName":"High CPU utilization"}
